@@ -110,7 +110,7 @@ dynamic input(type) {
   return data;
 }
 
-// responsible for creating wallets, ask user for some info, then store the values in wallets List
+
 create_new_wallet(wallets) {
   stdout.write("Enter wallet balance: ");
   double balance = input('double');
@@ -127,10 +127,10 @@ create_new_wallet(wallets) {
   );
   wallets.add(
       new_wallet); // since wallets a list we can call the add function on it.
-  print_wallet_info(new_wallet); // fancy way of printing stuff
+  print_wallet_info(new_wallet); 
 }
 
-// Fancy printing, Its always a good programming practice to separte stuff
+
 print_wallet_info(wallet) {
   print("\n\nCongratulations!!!");
   print("You have succesfully created a new wallet at: ${wallet.created_at}");
@@ -140,7 +140,7 @@ print_wallet_info(wallet) {
   print("Payment type: ${wallet.payment_type}");
 }
 
-// as the name suggested, this function ask user for the index of their walet then display its balance
+
 get_balance(wallets) {
   stdout.write("Enter your wallet Id: ");
   int index = input('int');
